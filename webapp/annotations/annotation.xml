@@ -58,6 +58,50 @@
 						<PropertyValue Property="Title" String="{@i18n&gt;customerCity}"/>
 					</Record>
 				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="CustomerDetails">
+					<Record Type="UI.FieldGroupType">
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="Customer/CompanyName"/>
+									<PropertyValue Property="Label" String="{@i18n&gt;companyName}"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="Customer/City"/>
+									<PropertyValue Property="Label" String="{@i18n&gt;city}"/>
+								</Record>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="Customer/Phone"/>
+									<PropertyValue Property="Label" String="{@i18n&gt;phone}"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet">
+							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#CustomerDetails"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;customerInfo}"/>
+						</Record>
+						<Record Type="UI.ReferenceFacet">
+							<PropertyValue Property="Label" String="{@i18n&gt;shipperInfo}"/>
+							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ShipperDetails"/>
+						</Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.FieldGroup" Qualifier="ShipperDetails">
+					<Record Type="UI.FieldGroupType">
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="Shipper/CompanyName"/>
+									<PropertyValue Property="Label" String="{@i18n&gt;companyName}"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
 			</Annotations>
 		</Schema>
 	</edmx:DataServices>
