@@ -17,7 +17,17 @@
 				"uri": "/Northwind/V2/Northwind/Northwind.svc/",
 				"type": "OData",
 				"settings": {
-					"localUri": "localService/metadata.xml"
+					"localUri": "localService/metadata.xml",
+					"annotations": [
+						"annotation"
+					]
+				}
+			},
+			"annotation": {
+				"type": "ODataAnnotation",
+				"uri": "annotations/annotation.xml",
+				"settings": {
+					"localUri": "annotations/annotation.xml"
 				}
 			}
 		},
@@ -90,6 +100,10 @@
 					"defaultCountMode": "Inline",
 					"refreshAfterChange": false
 				}
+			},
+			"@i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
 			}
 		},
 		"extends": {
