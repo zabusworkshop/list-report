@@ -38,6 +38,9 @@
 							<PropertyValue Property="Value" Path="ShipName"/>
 							<PropertyValue Property="Label" String="{@i18n&gt;shipName}"/>
 						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="EmployeeID"/>
+						</Record>
 					</Collection>
 				</Annotation>
 				<Annotation Term="UI.DataPoint" Qualifier="OrderId">
@@ -102,6 +105,43 @@
 						</PropertyValue>
 					</Record>
 				</Annotation>
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>EmployeeID</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="NorthwindModel.Order/EmployeeID">
+				<Annotation Term="Common.ValueList">
+					<Record>
+						<PropertyValue Property="Label" String="Employee"/>
+						<PropertyValue Property="CollectionPath" String="Employees"/>
+						<PropertyValue Property="SearchSupported" Bool="true"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterOut">
+									<PropertyValue Property="LocalDataProperty" PropertyPath="EmployeeID"/>
+									<PropertyValue Property="ValueListProperty" String="EmployeeID"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="FirstName"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="LastName"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="NorthwindModel.Employee/FirstName">
+				<Annotation Term="Common.Label" String="{@i18n&gt;firstName}"/>
+			</Annotations>
+			<Annotations Target="NorthwindModel.Employee/EmployeeID">
+				<Annotation Term="Common.Label" String="{@i18n&gt;id}"/>
+			</Annotations>
+			<Annotations Target="NorthwindModel.Employee/LastName">
+				<Annotation Term="Common.Label" String="{@i18n&gt;lastName}"/>
 			</Annotations>
 		</Schema>
 	</edmx:DataServices>
