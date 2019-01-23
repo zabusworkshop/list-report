@@ -41,6 +41,9 @@
 						<Record Type="UI.DataField">
 							<PropertyValue Property="Value" Path="EmployeeID"/>
 						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Freight"/>
+						</Record>
 					</Collection>
 				</Annotation>
 				<Annotation Term="UI.DataPoint" Qualifier="OrderId">
@@ -59,6 +62,12 @@
 					<Record Type="UI.DataPointType">
 						<PropertyValue Property="Value" Path="Customer/City"/>
 						<PropertyValue Property="Title" String="{@i18n&gt;customerCity}"/>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.DataPoint" Qualifier="Freight">
+					<Record Type="UI.DataPointType">
+						<PropertyValue Property="Title" String="{@i18n&gt;freight}"/>
+						<PropertyValue Property="Value" Path="Freight"/>
 					</Record>
 				</Annotation>
 				<Annotation Term="UI.FieldGroup" Qualifier="CustomerDetails">

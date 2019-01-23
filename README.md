@@ -20,3 +20,6 @@
 Теперь добавим SelectionField на EmployeeID, чтобы он появился в фильтер-баре - можно фильтровать, но подсказок пока нет.
 С фильтрами с подсказками какая-то бага в SAPUI5 1.44, они не применяются. Поэтому обновим версию до 1.52.13 в neo-app.json.
 Чтобы добавить подсказки к фильтрам, добавим аннотацию ValueList на Order/EmployeeID. В ValueListParameterOut указываем, по каким полям матчить коллекции order и Employee (по EmployeeID). И также укажем два ValueListParameterDisplayOnly для FirstName и LastName, чтобы они отображались в таблице при поиске для наглядности. Чтобы в этой таблице у колонок были заголовки, добавим label к Employee/EmployeeID, Employee/FirstName и Employee/LastName.
+
+## 5. Расширение фильтер-бара
+Как пример расширения добавим слайдер для выбора интервала Freight. Сначала создадим DataField для Freight, чтобы это поле отобразилось в таблице. Через визард создим extension на FilterBar ListView. Визард добавит информацию о расширении в manifest.json, заимпортирует шаблон listreportextension в .project.json и создаст заглушки для контроллера и фрагмента расширения. Допишем контроллер и фрагмент — во фрагмент вставим RangeSlider, в контроллер — методы onFreightSliderChange и onBeforeRebindTableExtension.

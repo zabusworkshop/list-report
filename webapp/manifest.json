@@ -107,7 +107,22 @@
 			}
 		},
 		"extends": {
-			"extensions": {}
+			"extensions": {
+				"sap.ui.viewExtensions": {
+					"sap.suite.ui.generic.template.ListReport.view.ListReport": {
+						"SmartFilterBarControlConfigurationExtension|Orders": {
+							"className": "sap.ui.core.Fragment",
+							"fragmentName": "examplelistreportexample.ext.fragment.Customfilter",
+							"type": "XML"
+						}
+					}
+				},
+				"sap.ui.controllerExtensions": {
+					"sap.suite.ui.generic.template.ListReport.view.ListReport": {
+						"controllerName": "examplelistreportexample.ext.controller.ListReportExt"
+					}
+				}
+			}
 		},
 		"contentDensities": {
 			"compact": true,
